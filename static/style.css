@@ -342,7 +342,7 @@ body.night .foot { background: linear-gradient(rgba(9,13,24,0), rgba(9,13,24,.94
 
 /* ---------- шторки і оверлеї ---------- */
 .overlay {
-  position: fixed; inset: 0; z-index: 20; background: rgba(0,0,0,.6);
+  position: fixed; inset: 0; z-index: 28; background: rgba(0,0,0,.6);
   display: flex; align-items: flex-end; justify-content: center; animation: fade var(--t-fast);
 }
 .overlay.center { align-items: center; }
