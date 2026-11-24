@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Галерея ролей — Козацька рада</title>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Alegreya+Sans:wght@400;700&family=Ruslan+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css?v=2">
+<style>
+  .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+  .gal .face { position: relative; transform: none; height: auto; }
+</style>
+</head>
+<body>
+<h1 class="title" style="text-align:center;padding-top:20px">Галерея ролей</h1>
+<div class="gal" id="g"></div>
+<script src="/static/art.js?v=2"></script>
+<script>
+  const R = { traitor: ['Зрадник', 'evil'], werewolf: ['Перевертень', 'evil'], kharakternyk: ['Характерник', 'good'],
+    healer: ['Знахар', 'good'], jura: ['Джура', 'good'], scribe: ['Писар', 'good'], elder: ['Старшина', 'good'], ghost: ['Привид', 'good'] };
+  document.getElementById('g').innerHTML = Object.entries(R).map(([k, [n, t]]) =>
+    `<div class="face front ${t} ${k}"><div class="role-art" style="height:180px">${ART[k]}</div><h2 class="role-name">${n}</h2></div>`).join('');
+</script>
+</body>
+</html>
